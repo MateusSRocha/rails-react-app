@@ -1,0 +1,12 @@
+{
+  "name": "rails-react-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mateus Soares da Rocha <rocha.mateus96@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn --cwd frontend install && yarn --cwd frontend build",
+    "deploy": "cp -a frontend/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  }
+}
