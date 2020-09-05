@@ -1,24 +1,36 @@
-# README
+## RAILS-REACT-APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Database
 
-Things you may want to cover:
+```rails db:create``` </br>
+```rails db:migrate```
 
-* Ruby version
+### Start
 
-* System dependencies
+```rake start```</br>
 
-* Configuration
+Both React and Rails will start. Sweet, just one terminal window!
 
-* Database creation
+### Heroku Deploy
 
-* Database initialization
+If you have already created your Heroku app, you can easily add a 
+remote to your local repository with the heroku ```git:remote``` command.
+All you need is your Heroku app’s name:
 
-* How to run the test suite
+```heroku git:remote -a your-heroku-app```</br>
+```set git remote heroku to https://git.heroku.com/your-heroku-app.git```</br>
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Rename your remote:
 
-* Deployment instructions
+```git remote rename heroku heroku-staging```</br>
 
-* ...
+
+#### To add corrects buildpacks to this project:
+
+```heroku buildpacks:add heroku/nodejs --index 1```</br>
+```heroku buildpacks:add heroku/ruby --index 2```</br>
+
+
+#### Deploy:
+
+```git push heroku your_branch:master```</br>
